@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.example.xuxin.myapplication.widge.MenuListHeaderView
+        android:id="@+id/menu_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/load_to_lay"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/load_to_weibo"
+                    android:background="@drawable/ic_drawer_weibo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+                <Button
+                    android:id="@+id/load_to_weixin"
+                    android:background="@drawable/ic_drawer_tencent"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+                <Button
+                    android:id="@+id/load_to_qq"
+                    android:background="@drawable/ic_drawer_qzone"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:id="@+id/load_to_app"
+                android:layout_below="@+id/load_to_lay"
+                android:text="@string/load_to_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </com.example.xuxin.myapplication.widge.MenuListHeaderView>
+</FrameLayout>
+
+
+

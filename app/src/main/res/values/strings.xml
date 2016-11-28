@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="search_drawer">搜索</string>
+    <string name="collect_drawer">收藏</string>
+    <string name="message_drawer">消息</string>
+    <string name="unline_drawer">离线</string>
+    <string name="campaign_drawer">活动</string>
+    <string name="setting_drawer">设置</string>
+    <string name="replay_drawer">反馈</string>
+    <string name="app_drawer">应用</string>
+    <string name="load_to_app">登录后，推荐更多您喜欢的文章</string>
+    <string name="menu_check">频道管理</string>
+
+</resources>
