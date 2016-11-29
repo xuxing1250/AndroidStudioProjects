@@ -13,9 +13,11 @@ import android.support.design.widget.TabLayout;
 import android.util.Log;
 import android.view.View;
 
+import com.example.xuxin.myapplication.Fragment.BaseTabFragment;
 import com.example.xuxin.myapplication.Fragment.ChanelFragment;
 import com.example.xuxin.myapplication.Fragment.NewsFragment;
 import com.example.xuxin.myapplication.Fragment.MenuFragment;
+import com.example.xuxin.myapplication.Fragment.RecommondNewsFragment;
 import com.example.xuxin.myapplication.R;
 import com.example.xuxin.myapplication.Utils.OkHttpGet;
 import com.example.xuxin.myapplication.adapter.TitleFragmentAdapter;
@@ -88,9 +90,14 @@ public class MainActivity extends BaseActivity {
     }
 
     private void createFragmetList() {
+        BaseTabFragment fragment;
         for (int i = 0; i < TAB_TITLE.length; i++) {
             mListTitle.add(TAB_TITLE[i]);
-            NewsFragment fragment = new NewsFragment();
+            if (TAB_TITLE[i].equals("推荐")) {
+                fragment = new RecommondNewsFragment();
+            } else {
+                fragment = new NewsFragment();
+            }
             HashMap<String, Object> hashMap = new HashMap<>();
             hashMap.put("title", mListTitle.get(i));
             hashMap.put("fragment", fragment);
@@ -125,7 +132,6 @@ public class MainActivity extends BaseActivity {
                 break;
             case CHANEL_FRAGMENT:
                 mChanelFragment = new ChanelFragment();
-                ft.replace(R.id.drawer_right, mChanelFragment);
                 break;
         }
         ft.commit();

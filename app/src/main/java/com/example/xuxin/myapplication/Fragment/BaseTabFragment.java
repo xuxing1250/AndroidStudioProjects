@@ -2,6 +2,7 @@ package com.example.xuxin.myapplication.Fragment;
 
 
 import android.support.v4.app.Fragment;
+import android.view.View;
 
 import com.example.xuxin.myapplication.activity.BaseActivity;
 
@@ -10,5 +11,8 @@ import com.example.xuxin.myapplication.activity.BaseActivity;
  */
 
 public abstract class BaseTabFragment extends Fragment {
+    abstract void setViewVisiable(View v);
+    abstract void setViewInvisiable(View v);
 
+    protected abstract void replaceFragment();
 }
